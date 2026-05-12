@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Civil Engineering Role-Based Career Roadmap | RVS College</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #5d4037;
+      --secondary: #8d6e63;
+      --accent: #d7ccc8;
+      --light: #f6f4f3;
+      --dark: #3e2723;
+      --text: #333333;
+      --text-light: #666666;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.8rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .logo::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: var(--secondary);
+      border-radius: 4px;
+      transform: rotate(45deg);
+      opacity: 0.3;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    /* Desktop Navigation */
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--secondary);
+    }
+
+    /* Hamburger Menu - Mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      background: none;
+      border: none;
+      z-index: 1001;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 280px;
+      height: 100vh;
+      background-color: var(--primary);
+      z-index: 2000;
+      transition: right 0.3s ease;
+      padding: 80px 20px 20px;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    }
+
+    .mobile-nav.open {
+      right: 0;
+    }
+
+    .mobile-nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 12px 0;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .mobile-nav .close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--secondary);
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1999;
+      display: none;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .page-header h1 {
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-header p {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Role Cards */
+    .roles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .role-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .role-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .role-icon {
+      height: 80px;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .role-content {
+      padding: 1.5rem;
+    }
+
+    .role-content h3 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+    }
+
+    .role-content p {
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background-color: var(--accent);
+      color: var(--dark);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Roadmap Details */
+    .roadmap-detail {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      display: none;
+    }
+
+    .roadmap-detail.active {
+      display: block;
+    }
+
+    .roadmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+    }
+
+    .roadmap-header h2 {
+      color: var(--primary);
+      font-size: 2rem;
+    }
+
+    .close-btn {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .roadmap-section {
+      margin-bottom: 2rem;
+    }
+
+    .roadmap-section h3 {
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      border-left: 4px solid var(--primary);
+      padding-left: 1rem;
+    }
+
+    .roadmap-section ul {
+      list-style-position: inside;
+      margin-left: 1rem;
+    }
+
+    .roadmap-section li {
+      margin-bottom: 0.7rem;
+      color: var(--text);
+    }
+
+    .roadmap-section ul ul {
+      margin-left: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .roadmap-section ul ul li {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .year-progression {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .year-card {
+      flex: 1;
+      min-width: 200px;
+      background: var(--light);
+      border-radius: 8px;
+      padding: 1.5rem;
+      border-top: 4px solid var(--secondary);
+    }
+
+    .year-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 3rem 2rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .footer-section p {
+      color: #cccccc;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-section ul li a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: white;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+    }
+
+    .social-icons a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #aaaaaa;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+      
+      nav ul {
+        display: none;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .logo-container {
+        margin-bottom: 0;
+      }
+      
+      .logo-text {
+        font-size: 1.2rem;
+      }
+      
+      .roles-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 0 1rem;
+      }
+      
+      .roadmap-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .close-btn {
+        align-self: flex-end;
+      }
+      
+      .roadmap-detail {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-placeholder">
+        <img src="rvs-logo.jpg" 
+             alt="RVS College Logo"
+             style="width: 75%; height: 100%; object-fit: contain;"
+             onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:white;font-weight:bold;font-size:18px\'>RVS</span>';">
+      </div>
+      <div class="college-info">
+        <h2>RVS College of Engineering</h2>
+        <div class="department">Department of Civil Engineering</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#roles">Roles</a></li>
+        <li><a href="#roadmaps">Roadmaps</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="close-menu" id="closeMenuBtn">&times;</button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#roadmaps">Roadmaps</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="page-header" id="home">
+      <h1>Civil Engineering Role-Based Career Roadmap</h1>
+      <p>Explore detailed career progression paths for various specializations in civil engineering. Each roadmap includes skill development, software proficiency, and industry readiness guidelines.</p>
+    </div>
+
+    <!-- Role Cards Grid -->
+    <div class="roles-grid" id="roles">
+      <!-- Structural Engineer -->
+      <div class="role-card" data-roadmap="structural">
+        <div class="role-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="role-content">
+          <h3>Structural Engineer</h3>
+          <p>Design and analyze structures to ensure safety, stability, and durability. Work on buildings, bridges, and other infrastructure projects.</p>
+          <div class="role-tags">
+            <span class="tag">Design</span>
+            <span class="tag">Analysis</span>
+            <span class="tag">RCC</span>
+            <span class="tag">Steel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Construction Engineer -->
+      <div class="role-card" data-roadmap="construction">
+        <div class="role-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <div class="role-content">
+          <h3>Construction Engineer</h3>
+          <p>Oversee construction projects from planning to completion, ensuring quality, safety, and adherence to schedules and budgets.</p>
+          <div class="role-tags">
+            <span class="tag">Execution</span>
+            <span class="tag">Management</span>
+            <span class="tag">Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site Engineer -->
+      <div class="role-card" data-roadmap="site">
+        <div class="role-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <div class="role-content">
+          <h3>Site Engineer</h3>
+          <p>Supervise construction activities on-site, ensure quality control, manage labor, and resolve technical issues during execution.</p>
+          <div class="role-tags">
+            <span class="tag">Field</span>
+            <span class="tag">Supervision</span>
+            <span class="tag">Quality Control</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planning Engineer -->
+      <div class="role-card" data-roadmap="planning">
+        <div class="role-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="role-content">
+          <h3>Planning Engineer</h3>
+          <p>Develop project schedules, monitor progress, and ensure projects are completed on time and within budget.</p>
+          <div class="role-tags">
+            <span class="tag">Scheduling</span>
+            <span class="tag">Control</span>
+            <span class="tag">Monitoring</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quantity Surveyor -->
+      <div class="role-card" data-roadmap="quantity">
+        <div class="role-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div class="role-content">
+          <h3>Quantity Surveyor</h3>
+          <p>Manage costs and contracts for construction projects, prepare estimates, bills of quantities, and handle tendering processes.</p>
+          <div class="role-tags">
+            <span class="tag">Estimation</span>
+            <span class="tag">Costing</span>
+            <span class="tag">Contracts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Geotechnical Engineer -->
+      <div class="role-card" data-roadmap="geotechnical">
+        <div class="role-icon">
+          <i class="fas fa-mountain"></i>
+        </div>
+        <div class="role-content">
+          <h3>Geotechnical Engineer</h3>
+          <p>Analyze soil and rock mechanics to design foundations, earthworks, and retaining structures for construction projects.</p>
+          <div class="role-tags">
+            <span class="tag">Soil</span>
+            <span class="tag">Foundation</span>
+            <span class="tag">Geology</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transportation Engineer -->
+      <div class="role-card" data-roadmap="transportation">
+        <div class="role-icon">
+          <i class="fas fa-road"></i>
+        </div>
+        <div class="role-content">
+          <h3>Transportation Engineer</h3>
+          <p>Design and maintain transportation systems including roads, highways, railways, airports, and traffic management systems.</p>
+          <div class="role-tags">
+            <span class="tag">Highways</span>
+            <span class="tag">Traffic</span>
+            <span class="tag">Urban Planning</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Water Resources Engineer -->
+      <div class="role-card" data-roadmap="water">
+        <div class="role-icon">
+          <i class="fas fa-water"></i>
+        </div>
+        <div class="role-content">
+          <h3>Water Resources Engineer</h3>
+          <p>Design and manage water-related infrastructure including dams, irrigation systems, water supply networks, and flood control systems.</p>
+          <div class="role-tags">
+            <span class="tag">Hydrology</span>
+            <span class="tag">Irrigation</span>
+            <span class="tag">Environmental</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Government Roles -->
+      <div class="role-card" data-roadmap="govt">
+        <div class="role-icon">
+          <i class="fas fa-landmark"></i>
+        </div>
+        <div class="role-content">
+          <h3>Government / PSU Roles</h3>
+          <p>Career paths in public sector undertakings, government departments, and infrastructure development authorities.</p>
+          <div class="role-tags">
+            <span class="tag">GATE</span>
+            <span class="tag">Public Sector</span>
+            <span class="tag">Government</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap Details -->
+    <div id="roadmaps">
+      <!-- Structural Engineer Roadmap -->
+      <div class="roadmap-detail" id="structural-roadmap">
+        <div class="roadmap-header">
+          <h2>Structural Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Skill Stack (Deep Dive)</h3>
+          <ul>
+            <li><strong>Engineering Mechanics</strong>
+              <ul>
+                <li>Free body diagrams (FBD) and equilibrium conditions</li>
+                <li>Statics of rigid bodies and distributed forces</li>
+                <li>Load transfer mechanisms in structures</li>
+              </ul>
+            </li>
+            <li><strong>Strength of Materials</strong>
+              <ul>
+                <li>Stress-strain relationships for different materials</li>
+                <li>Bending moment, shear force, torsion analysis</li>
+                <li>Deflection calculations and failure theories</li>
+              </ul>
+            </li>
+            <li><strong>Structural Analysis</strong>
+              <ul>
+                <li>Analysis of determinate and indeterminate structures</li>
+                <li>Matrix methods and computer-aided analysis</li>
+                <li>Dynamic analysis for seismic and wind loads</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Design Skills</h3>
+          <ul>
+            <li><strong>Reinforced Concrete Design</strong>
+              <ul>
+                <li>Limit state design methodology as per IS 456</li>
+                <li>Design of beams, slabs, columns, and footings</li>
+                <li>Prestressed concrete design principles</li>
+              </ul>
+            </li>
+            <li><strong>Steel Structure Design</strong>
+              <ul>
+                <li>Design of tension, compression, and flexural members</li>
+                <li>Connection design (bolted, welded, and hybrid)</li>
+                <li>Design of plate girders, trusses, and industrial structures</li>
+              </ul>
+            </li>
+            <li><strong>Advanced Topics</strong>
+              <ul>
+                <li>Seismic design principles and ductile detailing</li>
+                <li>Design of tall buildings and special structures</li>
+                <li>Bridge design fundamentals</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Proficiency</h3>
+          <ul>
+            <li><strong>Analysis & Design:</strong> ETABS, STAAD.Pro, SAP2000, SAFE</li>
+            <li><strong>Drafting & Detailing:</strong> AutoCAD, Revit, Tekla Structures</li>
+            <li><strong>Specialized Tools:</strong> MATLAB for advanced calculations, Excel for design sheets</li>
+            <li><strong>BIM Software:</strong> Revit, Navisworks for 3D modeling and coordination</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Year-wise Progression</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Year 1-2: Foundation</h4>
+              <ul>
+                <li>Engineering mechanics and mathematics</li>
+                <li>Basic structural analysis</li>
+                <li>Introduction to CAD software</li>
+                <li>Material science and properties</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Year 2-3: Specialization</h4>
+              <ul>
+                <li>Advanced structural analysis</li>
+                <li>RCC and steel design courses</li>
+                <li>Software training (ETABS, STAAD)</li>
+                <li>Construction technology</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Year 4: Professional Preparation</h4>
+              <ul>
+                <li>Internships with design firms</li>
+                <li>Project work on actual structures</li>
+                <li>Building codes and standards study</li>
+                <li>Portfolio development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Industry Readiness</h3>
+          <ul>
+            <li>Ability to interpret architectural and structural drawings</li>
+            <li>Understanding of design assumptions and limitations</li>
+            <li>Coordination with architects, contractors, and clients</li>
+            <li>Knowledge of relevant IS codes and international standards</li>
+            <li>Site visit experience and understanding of construction practices</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Construction Engineer Roadmap -->
+      <div class="roadmap-detail" id="construction-roadmap">
+        <div class="roadmap-header">
+          <h2>Construction Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Competencies</h3>
+          <ul>
+            <li><strong>Construction Planning & Management</strong>
+              <ul>
+                <li>Project lifecycle understanding</li>
+                <li>Resource planning and allocation</li>
+                <li>Cost estimation and budgeting</li>
+              </ul>
+            </li>
+            <li><strong>Site Execution Techniques</strong>
+              <ul>
+                <li>Formwork, scaffolding, and shuttering systems</li>
+                <li>Concreting techniques and quality control</li>
+                <li>Masonry, plastering, and finishing works</li>
+              </ul>
+            </li>
+            <li><strong>Construction Equipment</strong>
+              <ul>
+                <li>Selection of appropriate equipment for tasks</li>
+                <li>Equipment productivity and maintenance</li>
+                <li>Safety protocols for equipment operation</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Key Skill Areas</h3>
+          <ul>
+            <li><strong>Safety Management</strong>
+              <ul>
+                <li>OSHA standards and safety protocols</li>
+                <li>Risk assessment and mitigation strategies</li>
+                <li>Emergency response planning</li>
+              </ul>
+            </li>
+            <li><strong>Quality Control</strong>
+              <ul>
+                <li>Quality assurance procedures</li>
+                <li>Testing of construction materials</li>
+                <li>Non-destructive testing methods</li>
+              </ul>
+            </li>
+            <li><strong>Contract Management</strong>
+              <ul>
+                <li>Understanding contract documents</li>
+                <li>Claims management and dispute resolution</li>
+                <li>Subcontractor coordination</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Proficiency</h3>
+          <ul>
+            <li><strong>Project Management:</strong> MS Project, Primavera P6</li>
+            <li><strong>BIM Tools:</strong> Revit, Navisworks, BIM 360</li>
+            <li><strong>Document Management:</strong> Aconex, Procore</li>
+            <li><strong>Estimation Software:</strong> Candy, CostX, Planswift</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Certifications & Advancement</h3>
+          <ul>
+            <li>Project Management Professional (PMP)</li>
+            <li>LEED Accreditation for sustainable construction</li>
+            <li>Construction Health and Safety Technician (CHST)</li>
+            <li>Certified Construction Manager (CCM)</li>
+            <li>State-specific contractor licenses</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Progression</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Entry Level (0-3 years)</h4>
+              <ul>
+                <li>Assistant Construction Manager</li>
+                <li>Site Engineer</li>
+                <li>Field Engineer</li>
+                <li>Learn site operations</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Mid Level (3-8 years)</h4>
+              <ul>
+                <li>Construction Manager</li>
+                <li>Project Engineer</li>
+                <li>Superintendent</li>
+                <li>Manage medium projects</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Level (8+ years)</h4>
+              <ul>
+                <li>Senior Project Manager</li>
+                <li>Construction Director</li>
+                <li>VP of Construction</li>
+                <li>Oversee multiple projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Site Engineer Roadmap -->
+      <div class="roadmap-detail" id="site-roadmap">
+        <div class="roadmap-header">
+          <h2>Site Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Responsibilities</h3>
+          <ul>
+            <li><strong>Site Supervision</strong>
+              <ul>
+                <li>Daily site inspections and monitoring</li>
+                <li>Ensuring work quality as per specifications</li>
+                <li>Coordinating with subcontractors and labor</li>
+              </ul>
+            </li>
+            <li><strong>Technical Execution</strong>
+              <ul>
+                <li>Interpreting architectural and structural drawings</li>
+                <li>Setting out and surveying works</li>
+                <li>Managing material testing and quality checks</li>
+              </ul>
+            </li>
+            <li><strong>Documentation</strong>
+              <ul>
+                <li>Maintaining site diaries and progress reports</li>
+                <li>Recording measurements and quantities</li>
+                <li>Preparing daily and weekly progress reports</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Essential Skills</h3>
+          <ul>
+            <li><strong>Technical Skills</strong>
+              <ul>
+                <li>Reading and interpreting construction drawings</li>
+                <li>Basic surveying and leveling</li>
+                <li>Knowledge of construction materials and methods</li>
+                <li>Understanding of soil mechanics basics</li>
+              </ul>
+            </li>
+            <li><strong>Management Skills</strong>
+              <ul>
+                <li>Labor management and coordination</li>
+                <li>Material planning and inventory control</li>
+                <li>Equipment deployment and monitoring</li>
+                <li>Problem-solving in field conditions</li>
+              </ul>
+            </li>
+            <li><strong>Safety & Compliance</strong>
+              <ul>
+                <li>Implementing safety protocols on site</li>
+                <li>Environmental compliance monitoring</li>
+                <li>Quality control procedures</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Tools & Software</h3>
+          <ul>
+            <li><strong>Surveying Equipment:</strong> Total Station, Auto Level, GPS</li>
+            <li><strong>Mobile Apps:</strong> Fieldwire, PlanGrid, BIM 360 Field</li>
+            <li><strong>Documentation:</strong> MS Office, Bluebeam Revu</li>
+            <li><strong>Communication:</strong> Two-way radios, project management apps</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Progression Path</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Junior Site Engineer (0-2 years)</h4>
+              <ul>
+                <li>Assist senior engineers</li>
+                <li>Learn site operations</li>
+                <li>Basic documentation</li>
+                <li>Quality checks</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Site Engineer (2-5 years)</h4>
+              <ul>
+                <li>Independent site management</li>
+                <li>Team supervision</li>
+                <li>Progress reporting</li>
+                <li>Client coordination</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Site Engineer (5+ years)</h4>
+              <ul>
+                <li>Multiple site management</li>
+                <li>Mentoring junior engineers</li>
+                <li>Technical decision making</li>
+                <li>Project planning input</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planning Engineer Roadmap -->
+      <div class="roadmap-detail" id="planning-roadmap">
+        <div class="roadmap-header">
+          <h2>Planning Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Planning Skills</h3>
+          <ul>
+            <li><strong>Project Scheduling</strong>
+              <ul>
+                <li>Work Breakdown Structure (WBS) development</li>
+                <li>Critical Path Method (CPM) analysis</li>
+                <li>Gantt chart preparation and updating</li>
+                <li>Resource loading and leveling</li>
+              </ul>
+            </li>
+            <li><strong>Progress Monitoring</strong>
+              <ul>
+                <li>Earned Value Management (EVM)</li>
+                <li>Schedule Performance Index (SPI) tracking</li>
+                <li>Cost Performance Index (CPI) analysis</li>
+                <li>Delay analysis and mitigation planning</li>
+              </ul>
+            </li>
+            <li><strong>Risk Management</strong>
+              <ul>
+                <li>Risk identification and assessment</li>
+                <li>Contingency planning</li>
+                <li>Change management procedures</li>
+                <li>What-if scenario analysis</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Expertise</h3>
+          <ul>
+            <li><strong>Primary Tools:</strong> Primavera P6, MS Project</li>
+            <li><strong>BIM Integration:</strong> 4D/5D scheduling with Navisworks</li>
+            <li><strong>Data Analysis:</strong> Power BI, Excel advanced functions</li>
+            <li><strong>Collaboration:</strong> BIM 360, Aconex, Procore</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Methodologies</h3>
+          <ul>
+            <li><strong>Traditional Planning</strong>
+              <ul>
+                <li>CPM/PERT techniques</li>
+                <li>Line of Balance (LOB) for repetitive work</li>
+                <li>Resource histogram development</li>
+              </ul>
+            </li>
+            <li><strong>Modern Approaches</strong>
+              <ul>
+                <li>Lean Construction principles</li>
+                <li>Last Planner System (LPS)</li>
+                <li>BIM-based 4D/5D planning</li>
+                <li>Agile project management adaptation</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Certifications & Training</h3>
+          <ul>
+            <li>Planning and Scheduling Professional (PSP)</li>
+            <li>Oracle Primavera P6 Certification</li>
+            <li>Project Management Professional (PMP)</li>
+            <li>Certified Associate in Project Management (CAPM)</li>
+            <li>Risk Management Professional (PMI-RMP)</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Path</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Planning Engineer (0-3 years)</h4>
+              <ul>
+                <li>Basic schedule preparation</li>
+                <li>Progress tracking</li>
+                <li>Software proficiency</li>
+                <li>Report generation</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Planning Engineer (3-8 years)</h4>
+              <ul>
+                <li>Complex project scheduling</li>
+                <li>Team coordination</li>
+                <li>Client presentations</li>
+                <li>Risk analysis</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Planning Manager (8+ years)</h4>
+              <ul>
+                <li>Department management</li>
+                <li>Strategic planning</li>
+                <li>Process improvement</li>
+                <li>Mentoring team</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quantity Surveyor Roadmap -->
+      <div class="roadmap-detail" id="quantity-roadmap">
+        <div class="roadmap-header">
+          <h2>Quantity Surveyor Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Estimation Skills</h3>
+          <ul>
+            <li><strong>Quantity Take-off</strong>
+              <ul>
+                <li>Manual measurement from drawings</li>
+                <li>Software-based quantity extraction</li>
+                <li>Understanding of measurement standards (POMI, SMM)</li>
+                <li>Waste factor calculations</li>
+              </ul>
+            </li>
+            <li><strong>Rate Analysis</strong>
+              <ul>
+                <li>Material cost calculation</li>
+                <li>Labor cost estimation</li>
+                <li>Equipment cost analysis</li>
+                <li>Overhead and profit margin calculation</li>
+              </ul>
+            </li>
+            <li><strong>Bill of Quantities (BOQ)</strong>
+              <ul>
+                <li>BOQ preparation as per standards</li>
+                <li>Schedule of rates development</li>
+                <li>Tender document preparation</li>
+                <li>Comparative statement analysis</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Contract Management</h3>
+          <ul>
+            <li><strong>Contract Types</strong>
+              <ul>
+                <li>Lump sum contracts</li>
+                <li>Measurement contracts</li>
+                <li>Cost plus contracts</li>
+                <li>EPC contracts understanding</li>
+              </ul>
+            </li>
+            <li><strong>Claim Management</strong>
+              <ul>
+                <li>Variation order processing</li>
+                <li>Delay claims assessment</li>
+                <li>Dispute resolution procedures</li>
+                <li>Final account settlement</li>
+              </ul>
+            </li>
+            <li><strong>Payment Processing</strong>
+              <ul>
+                <li>Interim payment applications</li>
+                <li>Retention money management</li>
+                <li>Subcontractor payment processing</li>
+                <li>Final payment certification</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Proficiency</h3>
+          <ul>
+            <li><strong>Estimation Software:</strong> Candy, CostX, Buildsoft</li>
+            <li><strong>Take-off Tools:</strong> Bluebeam, Planswift, On-Screen Takeoff</li>
+            <li><strong>BIM Integration:</strong> 5D BIM with Revit/Navisworks</li>
+            <li><strong>Accounting:</strong> SAP, Oracle Financials</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Professional Qualifications</h3>
+          <ul>
+            <li>RICS (Royal Institution of Chartered Surveyors)</li>
+            <li>CIOB (Chartered Institute of Building)</li>
+            <li>IQS (Institute of Quantity Surveyors)</li>
+            <li>AACE (Association for the Advancement of Cost Engineering)</li>
+            <li>Certified Cost Professional (CCP)</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Progression</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Assistant QS (0-2 years)</h4>
+              <ul>
+                <li>Basic quantity take-off</li>
+                <li>Assist in BOQ preparation</li>
+                <li>Site measurements</li>
+                <li>Document filing</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Quantity Surveyor (2-5 years)</h4>
+              <ul>
+                <li>Independent estimation</li>
+                <li>Tender preparation</li>
+                <li>Contract administration</li>
+                <li>Client meetings</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior QS/Commercial Manager (5+ years)</h4>
+              <ul>
+                <li>Team management</li>
+                <li>Commercial strategy</li>
+                <li>Risk management</li>
+                <li>Business development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Geotechnical Engineer Roadmap -->
+      <div class="roadmap-detail" id="geotechnical-roadmap">
+        <div class="roadmap-header">
+          <h2>Geotechnical Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Technical Knowledge</h3>
+          <ul>
+            <li><strong>Soil Mechanics</strong>
+              <ul>
+                <li>Soil classification systems (USCS, IS)</li>
+                <li>Shear strength parameters (c, φ)</li>
+                <li>Consolidation and settlement analysis</li>
+                <li>Permeability and seepage analysis</li>
+              </ul>
+            </li>
+            <li><strong>Foundation Engineering</strong>
+              <ul>
+                <li>Shallow foundation design</li>
+                <li>Deep foundation (piles, piers) design</li>
+                <li>Bearing capacity calculations</li>
+                <li>Settlement analysis for foundations</li>
+              </ul>
+            </li>
+            <li><strong>Slope Stability</strong>
+              <ul>
+                <li>Slope stability analysis methods</li>
+                <li>Retaining wall design</li>
+                <li>Earth pressure theories</li>
+                <li>Landslide risk assessment</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Field & Laboratory Testing</h3>
+          <ul>
+            <li><strong>Field Tests</strong>
+              <ul>
+                <li>Standard Penetration Test (SPT)</li>
+                <li>Cone Penetration Test (CPT)</li>
+                <li>Pressuremeter Test</li>
+                <li>Plate Load Test</li>
+                <li>Vane Shear Test</li>
+              </ul>
+            </li>
+            <li><strong>Laboratory Tests</strong>
+              <ul>
+                <li>Grain size distribution</li>
+                <li>Atterberg limits</li>
+                <li>Direct shear test</li>
+                <li>Triaxial compression test</li>
+                <li>Consolidation test</li>
+              </ul>
+            </li>
+            <li><strong>Geophysical Methods</strong>
+              <ul>
+                <li>Seismic refraction/reflection</li>
+                <li>Electrical resistivity tomography</li>
+                <li>Ground penetrating radar</li>
+                <li>Cross-hole seismic testing</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Tools</h3>
+          <ul>
+            <li><strong>Analysis Software:</strong> PLAXIS, GeoStudio (SLOPE/W, SEEP/W)</li>
+            <li><strong>Foundation Design:</strong> LPILE, GROUP, SHAFT</li>
+            <li><strong>Data Processing:</strong> gINT, Dips, RocScience suite</li>
+            <li><strong>BIM Integration:</strong> Civil 3D with geotechnical modules</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Specializations</h3>
+          <ul>
+            <li><strong>Foundation Engineering</strong>
+              <ul>
+                <li>Deep foundation specialist</li>
+                <li>Ground improvement techniques</li>
+                <li>Offshore foundation design</li>
+              </ul>
+            </li>
+            <li><strong>Geotechnical Earthquake Engineering</strong>
+              <ul>
+                <li>Liquefaction analysis</li>
+                <li>Seismic site response</li>
+                <li>Dynamic soil-structure interaction</li>
+              </ul>
+            </li>
+            <li><strong>Environmental Geotechnics</strong>
+              <ul>
+                <li>Contaminant transport</li>
+                <li>Landfill design</li>
+                <li>Soil remediation</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Path</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Geotechnical Engineer (0-3 years)</h4>
+              <ul>
+                <li>Field testing supervision</li>
+                <li>Lab test coordination</li>
+                <li>Report preparation</li>
+                <li>Basic analysis</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Geotechnical Engineer (3-8 years)</h4>
+              <ul>
+                <li>Complex analysis</li>
+                <li>Project management</li>
+                <li>Client coordination</li>
+                <li>Team supervision</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Principal Geotechnical Engineer (8+ years)</h4>
+              <ul>
+                <li>Technical leadership</li>
+                <li>Business development</li>
+                <li>Expert witness</li>
+                <li>Research & development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transportation Engineer Roadmap -->
+      <div class="roadmap-detail" id="transportation-roadmap">
+        <div class="roadmap-header">
+          <h2>Transportation Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Technical Areas</h3>
+          <ul>
+            <li><strong>Highway Engineering</strong>
+              <ul>
+                <li>Geometric design (horizontal/vertical alignment)</li>
+                <li>Cross-section elements design</li>
+                <li>Intersection design</li>
+                <li>Drainage design for highways</li>
+              </ul>
+            </li>
+            <li><strong>Traffic Engineering</strong>
+              <ul>
+                <li>Traffic flow theory</li>
+                <li>Capacity and level of service analysis</li>
+                <li>Traffic signal design</li>
+                <li>Traffic impact studies</li>
+              </ul>
+            </li>
+            <li><strong>Pavement Engineering</strong>
+              <ul>
+                <li>Flexible pavement design (IRC, AASHTO)</li>
+                <li>Rigid pavement design</li>
+                <li>Pavement evaluation and management</li>
+                <li>Rehabilitation design</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Transportation Planning</h3>
+          <ul>
+            <li><strong>Urban Transportation</strong>
+              <ul>
+                <li>Transportation demand forecasting</li>
+                <li>Public transit planning</li>
+                <li>Non-motorized transport planning</li>
+                <li>Parking analysis and design</li>
+              </ul>
+            </li>
+            <li><strong>Transportation Systems</strong>
+              <ul>
+                <li>Intelligent Transportation Systems (ITS)</li>
+                <li>Transportation modeling and simulation</li>
+                <li>Transportation economics</li>
+                <li>Environmental impact assessment</li>
+              </ul>
+            </li>
+            <li><strong>Sustainable Transportation</strong>
+              <ul>
+                <li>Green transportation initiatives</li>
+                <li>Transit-oriented development</li>
+                <li>Active transportation planning</li>
+                <li>Climate-resilient infrastructure</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Expertise</h3>
+          <ul>
+            <li><strong>Highway Design:</strong> AutoCAD Civil 3D, Bentley OpenRoads</li>
+            <li><strong>Traffic Analysis:</strong> VISSIM, Synchro, HCS</li>
+            <li><strong>Transportation Planning:</strong> TransCAD, EMME, Cube</li>
+            <li><strong>Pavement Design:</strong> AASHTOWare, MEPDG software</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Professional Traffic Operations Engineer (PTOE)</li>
+            <li>Professional Transportation Planner (PTP)</li>
+            <li>Road Safety Professional (RSP)</li>
+            <li>ITS Professional (ITS-P)</li>
+            <li>Envision Sustainability Professional (ENV SP)</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Progression</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Transportation Engineer (0-3 years)</h4>
+              <ul>
+                <li>Design calculations</li>
+                <li>CAD drafting</li>
+                <li>Field data collection</li>
+                <li>Report preparation</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Transportation Engineer (3-8 years)</h4>
+              <ul>
+                <li>Project design lead</li>
+                <li>Client coordination</li>
+                <li>Team supervision</li>
+                <li>Proposal preparation</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Transportation Manager (8+ years)</h4>
+              <ul>
+                <li>Department management</li>
+                <li>Strategic planning</li>
+                <li>Business development</li>
+                <li>Policy development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Water Resources Engineer Roadmap -->
+      <div class="roadmap-detail" id="water-roadmap">
+        <div class="roadmap-header">
+          <h2>Water Resources Engineer Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Core Technical Domains</h3>
+          <ul>
+            <li><strong>Hydrology</strong>
+              <ul>
+                <li>Precipitation analysis and rainfall-runoff modeling</li>
+                <li>Flood frequency analysis</li>
+                <li>Watershed modeling</li>
+                <li>Hydrologic routing methods</li>
+              </ul>
+            </li>
+            <li><strong>Hydraulics</strong>
+              <ul>
+                <li>Open channel flow analysis</li>
+                <li>Pipe flow and network analysis</li>
+                <li>Sediment transport mechanics</li>
+                <li>Pump and turbine selection</li>
+              </ul>
+            </li>
+            <li><strong>Water Supply Engineering</strong>
+              <ul>
+                <li>Water demand estimation</li>
+                <li>Treatment process design</li>
+                <li>Distribution system design</li>
+                <li>Storage facility design</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Specialized Areas</h3>
+          <ul>
+            <li><strong>Irrigation Engineering</strong>
+              <ul>
+                <li>Crop water requirements</li>
+                <li>Irrigation system design (drip, sprinkler)</li>
+                <li>Canal design and lining</li>
+                <li>Drainage system design</li>
+              </ul>
+            </li>
+            <li><strong>Environmental Water Engineering</strong>
+              <ul>
+                <li>Wastewater treatment design</li>
+                <li>Stormwater management</li>
+                <li>Water quality modeling</li>
+                <li>Environmental impact assessment</li>
+              </ul>
+            </li>
+            <li><strong>Water Resources Planning</strong>
+              <ul>
+                <li>Water resources systems analysis</li>
+                <li>Reservoir operation planning</li>
+                <li>Groundwater management</li>
+                <li>Climate change adaptation</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Software Tools</h3>
+          <ul>
+            <li><strong>Hydrologic Modeling:</strong> HEC-HMS, SWAT, MIKE SHE</li>
+            <li><strong>Hydraulic Modeling:</strong> HEC-RAS, SWMM, EPANET</li>
+            <li><strong>Groundwater Modeling:</strong> MODFLOW, FEFLOW</li>
+            <li><strong>GIS Applications:</strong> ArcGIS, QGIS with hydrology tools</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Professional Certifications</h3>
+          <ul>
+            <li>Professional Engineer (PE) in Water Resources</li>
+            <li>Certified Floodplain Manager (CFM)</li>
+            <li>Board Certified Environmental Engineer (BCEE)</li>
+            <li>Envision Sustainability Professional (ENV SP)</li>
+            <li>GIS Professional (GISP)</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Path</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Water Resources Engineer (0-3 years)</h4>
+              <ul>
+                <li>Hydraulic calculations</li>
+                <li>Data collection and analysis</li>
+                <li>Report preparation</li>
+                <li>CAD drafting</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Senior Water Resources Engineer (3-8 years)</h4>
+              <ul>
+                <li>Project management</li>
+                <li>Complex modeling</li>
+                <li>Client presentations</li>
+                <li>Proposal development</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Water Resources Manager (8+ years)</h4>
+              <ul>
+                <li>Strategic planning</li>
+                <li>Policy development</li>
+                <li>Business development</li>
+                <li>Team leadership</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Government/PSU Roles Roadmap -->
+      <div class="roadmap-detail" id="govt-roadmap">
+        <div class="roadmap-header">
+          <h2>Government/PSU Career Roadmap</h2>
+          <button class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="roadmap-section">
+          <h3>Examination Preparation</h3>
+          <ul>
+            <li><strong>GATE (Graduate Aptitude Test in Engineering)</strong>
+              <ul>
+                <li>Complete civil engineering syllabus coverage</li>
+                <li>Previous year question practice</li>
+                <li>Mock test series</li>
+                <li>Time management strategies</li>
+              </ul>
+            </li>
+            <li><strong>SSC JE (Staff Selection Commission Junior Engineer)</strong>
+              <ul>
+                <li>Technical subjects revision</li>
+                <li>General awareness preparation</li>
+                <li>Reasoning and aptitude practice</li>
+              </ul>
+            </li>
+            <li><strong>State PSC Examinations</strong>
+              <ul>
+                <li>State-specific syllabus</li>
+                <li>Local regulations and laws</li>
+                <li>Regional language proficiency</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Major Government Organizations</h3>
+          <ul>
+            <li><strong>Central Government Departments</strong>
+              <ul>
+                <li>Central Public Works Department (CPWD)</li>
+                <li>Ministry of Road Transport & Highways (MoRTH)</li>
+                <li>Ministry of Jal Shakti (Water Resources)</li>
+                <li>Railway Engineering Services (IRSE)</li>
+              </ul>
+            </li>
+            <li><strong>Public Sector Undertakings (PSUs)</strong>
+              <ul>
+                <li>National Highways Authority of India (NHAI)</li>
+                <li>Irrigation and Water Resources Departments</li>
+                <li>Municipal Corporations and Development Authorities</li>
+                <li>State Public Works Departments (PWD)</li>
+              </ul>
+            </li>
+            <li><strong>Defense Organizations</strong>
+              <ul>
+                <li>Military Engineering Services (MES)</li>
+                <li>Border Roads Organization (BRO)</li>
+                <li>Engineers India Limited (EIL)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Required Skill Set</h3>
+          <ul>
+            <li><strong>Technical Competence</strong>
+              <ul>
+                <li>Strong fundamentals in all civil subjects</li>
+                <li>Knowledge of government standards and codes</li>
+                <li>Estimation and costing as per DSR</li>
+                <li>Contract management as per government procedures</li>
+              </ul>
+            </li>
+            <li><strong>Administrative Skills</strong>
+              <ul>
+                <li>Government documentation procedures</li>
+                <li>Tendering and procurement processes</li>
+                <li>Budget preparation and monitoring</li>
+                <li>Liaison with multiple departments</li>
+              </ul>
+            </li>
+            <li><strong>Soft Skills</strong>
+              <ul>
+                <li>Report writing and documentation</li>
+                <li>Public speaking and presentation</li>
+                <li>Team coordination and leadership</li>
+                <li>Conflict resolution</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Career Progression in Government</h3>
+          <div class="year-progression">
+            <div class="year-card">
+              <h4>Junior Engineer (Entry Level)</h4>
+              <ul>
+                <li>Site supervision</li>
+                <li>Measurement recording</li>
+                <li>Assisting senior engineers</li>
+                <li>Basic documentation</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Assistant Executive Engineer (3-8 years)</h4>
+              <ul>
+                <li>Independent project handling</li>
+                <li>Team management</li>
+                <li>Budget preparation</li>
+                <li>Client coordination</li>
+              </ul>
+            </div>
+            <div class="year-card">
+              <h4>Executive Engineer/Superintending Engineer (8+ years)</h4>
+              <ul>
+                <li>Department management</li>
+                <li>Policy implementation</li>
+                <li>Strategic planning</li>
+                <li>Administrative responsibilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-section">
+          <h3>Benefits & Growth Opportunities</h3>
+          <ul>
+            <li><strong>Job Security & Benefits</strong>
+              <ul>
+                <li>Permanent employment with pension</li>
+                <li>Regular promotions and increments</li>
+                <li>Medical benefits and insurance</li>
+                <li>Housing and transportation facilities</li>
+              </ul>
+            </li>
+            <li><strong>Professional Growth</strong>
+              <ul>
+                <li>Training and development programs</li>
+                <li>Opportunities for higher studies</li>
+                <li>Inter-departmental transfers</li>
+                <li>International assignments</li>
+              </ul>
+            </li>
+            <li><strong>Work-Life Balance</strong>
+              <ul>
+                <li>Fixed working hours</li>
+                <li>Generous leave policies</li>
+                <li>Job stability</li>
+                <li>Less pressure compared to private sector</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Civil Roadmap</h3>
+        <p>Your comprehensive guide to civil engineering career paths. Explore detailed roadmaps for various specializations and plan your professional journey.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#roles">Career Roles</a></li>
+          <li><a href="#roadmaps">Detailed Roadmaps</a></li>
+          <li><a href="#resources">Learning Resources</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Popular Specializations</h3>
+        <ul>
+          <li><a href="#" class="role-link" data-roadmap="structural">Structural Engineering</a></li>
+          <li><a href="#" class="role-link" data-roadmap="construction">Construction Management</a></li>
+          <li><a href="#" class="role-link" data-roadmap="geotechnical">Geotechnical Engineering</a></li>
+          <li><a href="#" class="role-link" data-roadmap="transportation">Transportation Engineering</a></li>
+          <li><a href="#" class="role-link" data-roadmap="water">Water Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> Civil Department</p>
+        <p><i class="fas fa-phone"></i> RVS College of Engineering, Dindigul</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Civil Engineering Roadmap. RVS College of Engineering, Dindigul. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // HAMBURGER MENU FUNCTIONALITY
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      const closeMenuBtn = document.getElementById('closeMenuBtn');
+      const overlay = document.getElementById('overlay');
+      
+      function openMenu() {
+        mobileNav.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMenu() {
+        mobileNav.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      
+      if (hamburgerBtn) hamburgerBtn.addEventListener('click', openMenu);
+      if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      
+      // Close mobile menu when a link is clicked
+      const mobileLinks = document.querySelectorAll('.mobile-nav a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          closeMenu();
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
+      
+      // ROADMAP FUNCTIONALITY - FIX BROKEN LINKS
+      // Role card click event
+      const roleCards = document.querySelectorAll('.role-card');
+      const roadmapDetails = document.querySelectorAll('.roadmap-detail');
+      const closeButtons = document.querySelectorAll('.close-btn');
+      const roleLinks = document.querySelectorAll('.role-link');
+      
+      // Show roadmap when role card is clicked
+      roleCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const roadmapId = this.getAttribute('data-roadmap') + '-roadmap';
+          
+          // Hide all roadmaps
+          roadmapDetails.forEach(roadmap => {
+            roadmap.classList.remove('active');
+          });
+          
+          // Show selected roadmap
+          const selectedRoadmap = document.getElementById(roadmapId);
+          if (selectedRoadmap) {
+            selectedRoadmap.classList.add('active');
+            selectedRoadmap.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+      
+      // Role links in footer
+      roleLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const roadmapId = this.getAttribute('data-roadmap') + '-roadmap';
+          
+          // Hide all roadmaps
+          roadmapDetails.forEach(roadmap => {
+            roadmap.classList.remove('active');
+          });
+          
+          // Show selected roadmap
+          const selectedRoadmap = document.getElementById(roadmapId);
+          if (selectedRoadmap) {
+            selectedRoadmap.classList.add('active');
+            selectedRoadmap.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+      
+      // Close roadmap when close button is clicked
+      closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const roadmap = this.closest('.roadmap-detail');
+          roadmap.classList.remove('active');
+        });
+      });
+      
+      // Navigation smooth scrolling for all anchor links (FIX BROKEN LINKS)
+      document.querySelectorAll('nav a, .mobile-nav a, .footer-section a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            const targetId = href;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+      
+      // Fix for "Resources" section - add if missing
+      if (!document.getElementById('resources')) {
+        const resourcesDiv = document.createElement('div');
+        resourcesDiv.id = 'resources';
+        resourcesDiv.style.marginTop = '2rem';
+        resourcesDiv.style.background = '#eef2ff';
+        resourcesDiv.style.padding = '2rem';
+        resourcesDiv.style.borderRadius = '24px';
+        resourcesDiv.innerHTML = '<h3 style="color: var(--primary);"><i class="fas fa-book-open"></i> Learning Resources</h3><p>📘 Recommended: NPTEL courses, IS codes (456, 800), standard textbooks. Software tutorials: STAAD, ETABS, Primavera. Mock tests for GATE & competitive exams.</p>';
+        document.querySelector('.container').appendChild(resourcesDiv);
+      }
+    });
+  </script>
+</body>
+</html>
